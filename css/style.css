@@ -36,6 +36,7 @@ main {
 }
 
 .container {
+    display: flex;
     width: 98%;
     margin: 0 auto;
     flex-wrap: wrap;
@@ -43,6 +44,7 @@ main {
 }
 
 .icons {
+    display: flex;
     width: 200px;
     height: 100px; 
     flex-direction: column;
