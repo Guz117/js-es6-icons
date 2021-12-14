@@ -15,132 +15,131 @@ select, visualizzare solamente le icone corrispondenti.
 */
 
 const icon = [
-    {
-        name: 'cat',
-        type: 'animal',
-        color: '#6d6dfa',
-        font: 'fas',
-        awesome: 'fa-'
-
-    },
-    {
-        name: 'crow',
-        type: 'animal',
-        color: '#6d6dfa',
-        font: 'fas',
-        awesome: 'fa-'
-    },
-    {
-        name: 'dog',
-        type: 'animal',
-        color: '#6d6dfa',
-        font: 'fas',
-        awesome: 'fa-'
-    },
-    {
-        name: 'dove',
-        type: 'animal',
-        color: '#6d6dfa',
-        font: 'fas',
-        awesome: 'fa-'
-    },
-    {
-        name: 'dragon',
-        type: 'animal',
-        color: '#6d6dfa',
-        font: 'fas',
-        awesome: 'fa-'
-    },
-    {
-        name: 'horse',
-        type: 'animal',
-        color: '#6d6dfa',
-        font: 'fas',
-        awesome: 'fa-'
-    },
-    {
-        name: 'hippo',
-        type: 'animal',
-        color: '#6d6dfa',
-        font: 'fas',
-        awesome: 'fa-'
-    },
-    {
-        name: 'fish',
-        type: 'animal',
-        color: '#6d6dfa',
-        font: 'fas',
-        awesome: 'fa-'
-    },
-    {
-        name: 'carrot',
-        type: 'vegetable',
-        color: '#ffa500',
-        font: 'fas',
-        awesome: 'fa-'
-    },
-    {
-        name: 'apple-alt',
-        type: 'vegetable',
-        color: '#ffa500',
-        font: 'fas',
-        awesome: 'fa-'
-    },
-    {
-        name: 'lemon',
-        type: 'vegetable',
-        color: '#ffa500',
-        font: 'fas',
-        awesome: 'fa-'
-    },
-    {
-        name: 'pepper-hot',
-        type: 'vegetable',
-        color: '#ffa500',
-        font: 'fas',
-        awesome: 'fa-'
-    },
-    {
-        name: 'user-astronaut',
-        type: 'user',
-        color: '#800080',
-        font: 'fas',
-        awesome: 'fa-'
-    },
-    {
-        name: 'user-graduate',
-        type: 'user',
-        color: '#800080',
-        font: 'fas',
-        awesome: 'fa-'
-    },
-    {
-        name: 'user-ninja',
-        type: 'user',
-        color: '#800080',
-        font: 'fas',
-        awesome: 'fa-'
-    },
-    {
-        name: 'user-secret',
-        type: 'user',
-        color: '#800080',
-        font: 'fas',
-        awesome: 'fa-'
-    },
+	{
+		name: 'cat',
+		prefix: 'fa-',
+		type: 'animal',
+		family: 'fas',
+		color: 'orange'
+	},
+	{
+		name: 'crow',
+		prefix: 'fa-',
+		type: 'animal',
+		family: 'fas',
+		color: 'orange'
+	},
+	{
+		name: 'dog',
+		prefix: 'fa-',
+		type: 'animal',
+		family: 'fas',
+		color: 'orange'
+	},
+	{
+		name: 'dove',
+		prefix: 'fa-',
+		type: 'animal',
+		family: 'fas',
+		color: 'orange'
+	},
+	{
+		name: 'dragon',
+		prefix: 'fa-',
+		type: 'animal',
+		family: 'fas',
+		color: 'orange'
+	},
+	{
+		name: 'horse',
+		prefix: 'fa-',
+		type: 'animal',
+		family: 'fas',
+		color: 'orange'
+	},
+	{
+		name: 'hippo',
+		prefix: 'fa-',
+		type: 'animal',
+		family: 'fas',
+		color: 'orange'
+	},
+	{
+		name: 'fish',
+		prefix: 'fa-',
+		type: 'animal',
+		family: 'fas',
+		color: 'orange'
+	},
+	{
+		name: 'carrot',
+		prefix: 'fa-',
+		type: 'vegetable',
+		family: 'fas',
+		color: 'green'
+	},
+	{
+		name: 'apple-alt',
+		prefix: 'fa-',
+		type: 'vegetable',
+		family: 'fas',
+		color: 'green'
+	},
+	{
+		name: 'lemon',
+		prefix: 'fa-',
+		type: 'vegetable',
+		family: 'fas',
+		color: 'green'
+	},
+	{
+		name: 'pepper-hot',
+		prefix: 'fa-',
+		type: 'vegetable',
+		family: 'fas',
+		color: 'green'
+	},
+	{
+		name: 'user-astronaut',
+		prefix: 'fa-',
+		type: 'user',
+		family: 'fas',
+		color: 'blue'
+	},
+	{
+		name: 'user-graduate',
+		prefix: 'fa-',
+		type: 'user',
+		family: 'fas',
+		color: 'blue'
+	},
+	{
+		name: 'user-ninja',
+		prefix: 'fa-',
+		type: 'user',
+		family: 'fas',
+		color: 'blue'
+	},
+	{
+		name: 'user-secret',
+		prefix: 'fa-',
+		type: 'user',
+		family: 'fas',
+		color: 'blue'
+	}
 ];
 
 const iconContainer = document.querySelector('.container');
 
-// for (let i = 0; i < icon.length; i++) {
-//   const obj = icon[i];
-// 	const iconCard = `
-// 		<div class="icons">
-// 			<i class="${obj.font} ${obj.awesome}${obj.name} icon" style="color:${obj.color}" ></i>
-// 			<span>${obj.name}</span>
-// 		</div>`;
-//         iconContainer.innerHTML += iconCard;
-// }        
+for (let i = 0; i < icon.length; i++) {
+  const obj = icon[i];
+	const iconCard = `
+		<div class="icons">
+			<i class="${obj.family} ${obj.prefix}${obj.name} icon" style="color:${obj.color}" ></i>
+			<span>${obj.name}</span>
+		</div>`;
+        iconContainer.innerHTML += iconCard;
+}        
 
 
 const select = document.getElementById('icon');
@@ -150,8 +149,8 @@ select.addEventListener('change', function() {
     let type = select.value;
     if (type == 'animals') {
         const animal = icon.map((element) => {
-            const {name, type, color, font, awesome} = element;
-            return {name, type, color, font, awesome}
+            const {name, type, color, family, prefix} = element;
+            return {name, type, color, family, prefix}
         });
         let animals = animal.filter((element) => {
             return element.type == 'animal';
@@ -159,14 +158,14 @@ select.addEventListener('change', function() {
         animals.forEach((element) => {
             iconContainer.innerHTML += `
              		<div class="icons">
-            			<i class="${element.font} ${element.awesome}${element.name} icon" style="color:${element.color}" ></i>
+            			<i class="${element.family} ${element.prefix}${element.name} icon" style="color:${element.color}" ></i>
              			<span>${element.name}</span>
              		</div>`
         });
     } else if (type == 'vegetables') {
         const vegetable = icon.map((element) => {
-            const {name, type, color, font, awesome} = element;
-            return {name, type, color, font, awesome}
+            const {name, type, color, family, prefix} = element;
+            return {name, type, color, family, prefix}
         });
         let vegetables = vegetable.filter((element) => {
             return element.type == 'vegetable';
@@ -174,14 +173,14 @@ select.addEventListener('change', function() {
         vegetables.forEach((element) => {
             iconContainer.innerHTML += `
              		<div class="icons">
-            			<i class="${element.font} ${element.awesome}${element.name} icon" style="color:${element.color}" ></i>
+            			<i class="${element.family} ${element.prefix}${element.name} icon" style="color:${element.color}" ></i>
              			<span>${element.name}</span>
              		</div>`
         });
     } else if (type == 'users') {
         const user = icon.map((element) => {
-            const {name, type, color, font, awesome} = element;
-            return {name, type, color, font, awesome}
+            const {name, type, color, family, prefix} = element;
+            return {name, type, color, family, prefix}
         });
         let users = user.filter((element) => {
             return element.type == 'user';
@@ -189,7 +188,7 @@ select.addEventListener('change', function() {
         users.forEach((element) => {
             iconContainer.innerHTML += `
              		<div class="icons">
-            			<i class="${element.font} ${element.awesome}${element.name} icon" style="color:${element.color}" ></i>
+            			<i class="${element.family} ${element.prefix}${element.name} icon" style="color:${element.color}" ></i>
              			<span>${element.name}</span>
              		</div>`
         });
@@ -198,7 +197,7 @@ select.addEventListener('change', function() {
                const obj = icon[i];
              	const iconCard = `
              		<div class="icons">
-             			<i class="${obj.font} ${obj.awesome}${obj.name} icon" style="color:${obj.color}" ></i>
+             			<i class="${obj.family} ${obj.prefix}${obj.name} icon" style="color:${obj.color}" ></i>
              			<span>${obj.name}</span>
              		</div>`;
                      iconContainer.innerHTML += iconCard;
