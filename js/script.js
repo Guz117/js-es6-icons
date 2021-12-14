@@ -146,6 +146,7 @@ const iconContainer = document.querySelector('.container');
 const select = document.getElementById('icon');
 
 select.addEventListener('change', function() {
+    iconContainer.innerHTML = '';
     let type = select.value;
     if (type == 'animals') {
         const animal = icon.map((element) => {
@@ -192,6 +193,17 @@ select.addEventListener('change', function() {
              			<span>${element.name}</span>
              		</div>`
         });
+    } else if (type == 'all') {
+        for (let i = 0; i < icon.length; i++) {
+               const obj = icon[i];
+             	const iconCard = `
+             		<div class="icons">
+             			<i class="${obj.font} ${obj.awesome}${obj.name} icon" style="color:${obj.color}" ></i>
+             			<span>${obj.name}</span>
+             		</div>`;
+                     iconContainer.innerHTML += iconCard;
+             }        
+            
     }
     
 }); 
