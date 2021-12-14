@@ -132,12 +132,68 @@ const icon = [
 
 const iconContainer = document.querySelector('.container');
 
-for (let i = 0; i < icon.length; i++) {
-  const obj = icon[i];
-	const iconCard = `
-		<div class="icons">
-			<i class="${obj.font} ${obj.awesome}${obj.name} icon" style="color:${obj.color}" ></i>
-			<span>${obj.name}</span>
-		</div>`;
-        iconContainer.innerHTML += iconCard;
-}        
+// for (let i = 0; i < icon.length; i++) {
+//   const obj = icon[i];
+// 	const iconCard = `
+// 		<div class="icons">
+// 			<i class="${obj.font} ${obj.awesome}${obj.name} icon" style="color:${obj.color}" ></i>
+// 			<span>${obj.name}</span>
+// 		</div>`;
+//         iconContainer.innerHTML += iconCard;
+// }        
+
+
+const select = document.getElementById('icon');
+
+select.addEventListener('change', function() {
+    let type = select.value;
+    if (type == 'animals') {
+        const animal = icon.map((element) => {
+            const {name, type, color, font, awesome} = element;
+            return {name, type, color, font, awesome}
+        });
+        let animals = animal.filter((element) => {
+            return element.type == 'animal';
+        });
+        animals.forEach((element) => {
+            iconContainer.innerHTML += `
+             		<div class="icons">
+            			<i class="${element.font} ${element.awesome}${element.name} icon" style="color:${element.color}" ></i>
+             			<span>${element.name}</span>
+             		</div>`
+        });
+    } else if (type == 'vegetables') {
+        const vegetable = icon.map((element) => {
+            const {name, type, color, font, awesome} = element;
+            return {name, type, color, font, awesome}
+        });
+        let vegetables = vegetable.filter((element) => {
+            return element.type == 'vegetable';
+        });
+        vegetables.forEach((element) => {
+            iconContainer.innerHTML += `
+             		<div class="icons">
+            			<i class="${element.font} ${element.awesome}${element.name} icon" style="color:${element.color}" ></i>
+             			<span>${element.name}</span>
+             		</div>`
+        });
+    } else if (type == 'users') {
+        const user = icon.map((element) => {
+            const {name, type, color, font, awesome} = element;
+            return {name, type, color, font, awesome}
+        });
+        let users = user.filter((element) => {
+            return element.type == 'user';
+        });
+        users.forEach((element) => {
+            iconContainer.innerHTML += `
+             		<div class="icons">
+            			<i class="${element.font} ${element.awesome}${element.name} icon" style="color:${element.color}" ></i>
+             			<span>${element.name}</span>
+             		</div>`
+        });
+    }
+    
+}); 
+    
+
